@@ -1,7 +1,7 @@
 
-# 🚲 Used Bike Dataset – Data Cleaning Project
+# 🚲 Used Bike Dataset – Data Cleaning 
 
-This project involved cleaning a real-world **used bike dataset** as part of a data analytics internship. The dataset contained several inconsistencies, mixed formats, and missing values that needed to be addressed before analysis or modeling.
+This project involved cleaning a real-world **used bike dataset** as a part. The dataset contained several inconsistencies, mixed formats, and missing values that needed to be addressed before analysis or modeling.
 
 ---
 
@@ -24,20 +24,25 @@ The dataset includes the following features:
 
 ## 🧼 Data Cleaning Steps
 
-### ✅ 1. Removed Duplicate Rows
+### ✅ 1. Handled Missing Values
+
+- Checked for missing values across all columns using `df.isnull().sum()`
+- Dropped rows containing missing values in any critical column (e.g., `power`, `mileage`, `cc`, `price`)
+- Ensured the final dataset is clean and free of NaN entries
+
+```python
+# Check missing values
+df.isnull().sum()
+
+# Drop rows with missing values
+df.dropna(inplace=True)
+```
+---  
+
+### ✅ 2. Removed Duplicate Rows
 
 ```python
 df.drop_duplicates(inplace=True)
-```
-
----
-
-### ✅ 2. Standardized Categorical Columns
-
-```python
-df['brand'] = df['brand'].str.strip().str.lower()
-df['owner'] = df['owner'].str.strip().str.lower()
-df['location'] = df['location'].str.strip().str.lower()
 ```
 
 ---
@@ -65,6 +70,44 @@ df = df[df['kms_driven'] > 500]
 - Replaced invalid or unreadable entries with `NaN`
 
 ```python
+# Making every value uniform in power column
+import re
+import numpy as np
+
+def convert_power(value):
+    if pd.isna(value):
+        return np.nan
+
+    value = str(value).lower().strip()
+
+    # Try extracting from parentheses first
+    if '(' in value and ')' in value:
+        inner = re.search(r'\((.*?)\)', value)
+        if inner:
+            val = inner.group(1).strip()
+            match = re.search(r'(\d+\.?\d*)\s*(bhp|ps)', val)
+            if match:
+                number = float(match.group(1))
+                unit = match.group(2)
+                if unit == 'ps':
+                    return round(number * 0.98632, 2)
+                elif unit == 'bhp':
+                    return round(number, 2)
+
+    # Fallback: search outside parentheses
+    match = re.search(r'(\d+\.?\d*)\s*(kw|ps|bhp)', value)
+    if match:
+        number = float(match.group(1))
+        unit = match.group(2)
+        if unit == 'kw':
+            return round(number * 1.34102, 2)
+        elif unit == 'ps':
+            return round(number * 0.98632, 2)
+        elif unit == 'bhp':
+            return round(number, 2)
+
+    return np.nan
+
 df['power'] = df['power'].apply(convert_power)
 ```
 
@@ -96,21 +139,10 @@ df['mileage'] = df['mileage'].apply(clean_mileage)
 df = df[df['mileage'] >= 10]
 ```
 
----
-
-### ✅ 6. Cleaned `cc` (Engine Capacity)
-
-- Extracted numeric values from entries like `"149 cc"`, `"200CC"`, or `"124.7 cc"`
-- Removed non-numeric values and kept only valid numerical entries
-- Converted to float for analysis
-
-```python
-df['cc'] = df['cc'].astype(str).str.extract(r'(\d+\.?\d*)').astype(float)
-```
 
 ---
 
-### ✅ 7. Cleaned `price`
+### ✅ 6. Cleaned `price`
 
 - Replaced values equal to `0` with `NaN` (as 0 is not a valid bike price)
 - Dropped rows where `price` was missing
@@ -124,7 +156,7 @@ df.dropna(subset=['price'], inplace=True)
 
 ## ✅ Final Dataset
 
-- Total rows after cleaning: **4970**
+- Total rows after cleaning: **4927**
 - Cleaned dataset saved as: `cleaned_bike_data.csv`
 
 ```python
@@ -148,7 +180,7 @@ df.to_csv('cleaned_bike_data.csv', index=False)
 - Perform Exploratory Data Analysis (EDA)
 - Feature Engineering (e.g., compute `bike_age` from `model_year`)
 - Build regression models to predict `price`
-- Create dashboards using Power BI or Tableau
+- Create graphs to visualise using Python.
 
 ---
 
