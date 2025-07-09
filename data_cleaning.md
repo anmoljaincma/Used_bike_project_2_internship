@@ -153,7 +153,14 @@ df.dropna(subset=['price'], inplace=True)
 ```
 
 ---
+### ✅ 7. Standardized Text Fields (Bike Names & Locations)
 
+- Trimmed unnecessary leading/trailing spaces in text columns using Google Sheets' **TRIM** function
+- Cleaned and corrected inconsistent bike model names (e.g., `" Pulsar 150"` → `"Pulsar 150"`)
+- Used **Google Sheets suggestions** to fix wrong location names (e.g., `"uthagamdala"` corrected to `"udhagamandala"`, `"hanamankonda"` → `"hanamkonda"`)
+
+  ---
+  
 ## ✅ Final Dataset
 
 - Total rows after cleaning: **4927**
@@ -164,6 +171,9 @@ df.to_csv('cleaned_bike_data.csv', index=False)
 ```
 
 ---
+
+
+
 
 ## 🧠 Tools Used
 
@@ -186,6 +196,6 @@ df.to_csv('cleaned_bike_data.csv', index=False)
 
 ## 🙌 Acknowledgment
 
-This project was completed as part of a **Data Analytics Internship**. The objective was to practice real-world data cleaning techniques and prepare the dataset for further analysis and modeling.
+This cleaning was completed as part of a **Project 2 of Data Analytics Internship**. The objective was to practice real-world data cleaning techniques and prepare the dataset for further analysis and modeling.
 
 ---
