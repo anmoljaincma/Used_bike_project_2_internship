@@ -163,7 +163,7 @@ df.dropna(subset=['price'], inplace=True)
   
 ## ✅ Final Dataset
 
-- Total rows after cleaning: **4927**
+- Total rows after cleaning: **4913**
 - Cleaned dataset saved as: `cleaned_bike_data.csv`
 
 ```python
