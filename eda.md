@@ -93,8 +93,10 @@ plt.grid(True)
 plt.tight_layout()
 plt.show()
 ```
-**Note**: All screenshots of graph are given in EDA docx file.
-### 🔍 Insights:
+**Note**: All screenshots of graph are given in EDA docx file.  
+
+**🔍 Insights:**  
+
 Most bikes are listed in the **₹0–₹50K** range.
 
 The second-highest volume is in the **₹50K–₹1L** segment.
@@ -102,5 +104,101 @@ The second-highest volume is in the **₹50K–₹1L** segment.
 This confirms a strong focus on **budget-friendly used bikes** in the dataset.
 
 #### ✅ These insights help in defining pricing strategies, identifying high-volume segments, and selecting features for price prediction models
+
+## 3. ⚠️ Price Outlier Detection and Handling
+
+### 🔍 Outlier Detection Using IQR
+
+To identify price outliers, we used the **Interquartile Range (IQR) method**:
+
+```python
+Q1 = df['price'].quantile(0.25)
+Q3 = df['price'].quantile(0.75)
+IQR = Q3 - Q1
+
+lower_bound = Q1 - 1.5 * IQR  
+upper_bound = Q3 + 1.5 * IQR
+```
+- **Lower Bound:** ₹  `Q1 – 1.5 × IQR`
+- **Upper Bound:** ₹  `Q3 + 1.5 × IQR`
+- **Outliers Detected:** `306` rows
+
+### 🧠 Decision:
+Upon inspection, we found that many outliers were **genuine bikes**:
+
+✅ Very old bikes (priced below ₹10,000)
+
+✅ Premium bikes (priced above ₹3L)
+
+✅ Niche or luxury models
+
+Hence, dropping them would have led to **loss of meaningful information**.
+
+### ✅ Final Action:
+Instead of removing them, we **created a new column** `price_outlier` with binary values:
+
+`0` → Not an outlier
+
+`1` → Statistical outlier based on IQR
+```python
+df['price_outlier'] = ((df['price'] < lower_bound) | (df['price'] > upper_bound)).astype(int)
+```
+This allows us to:
+
+Keep all records intact
+
+Perform conditional analysis or filtering when needed
+
+Improve fairness and transparency in modeling
+
+### 📊 Visual Example :
+We also plotted a scatterplot of price vs. kms_driven to visualize these outliers:
+
+
+🔴 Red: Outliers
+
+🔵 Blue: Normal values
+```python
+import seaborn as sns
+
+sns.scatterplot(data=df, x='kms_driven', y='price', hue='price_outlier', palette=['blue', 'red'])
+plt.title("Price Outliers Highlighted (Red)")
+```
+**Note**: All screenshots of graph are given in EDA docx file.
+
+### 📈 4. Skewness Check
+```python
+df['price'].skew()
+```
+**Note**: All screenshots are given in EDA docx file given in repository.
+
+The skewness value is positive, confirming the long tail towards higher prices. A log transformation may be considered during modeling.
+
+## 👤 5. Price by Owner Type
+We compared prices across different owner categories:
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+
+owner_order = ['first owner', 'second owner', 'third owner', 'fourth owner or more']
+
+
+sns.boxplot(
+    x='owner',
+    y='price',
+    data=df,
+    order=owner_order
+)
+plt.title("Price Distribution by Ownership")
+plt.show()
+```
+**Note**: All screenshots of graph are given in EDA docx file.
+
+**Insight:**
+**First-owner** bikes are generally priced higher and are clustered to be most in number followed by second and third owner while **fourth-owner** bikes are few and at the lower end of the price range.
+
+
+
 
 
