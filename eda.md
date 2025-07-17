@@ -149,10 +149,10 @@ Keep all records intact
 
 Perform conditional analysis or filtering when needed
 
-Improve fairness and transparency in modeling
+Improve fairness and transparency in modelling
 
 ### 📊 Visual Example :
-We also plotted a scatterplot of price vs. kms_driven to visualize these outliers:
+We also plotted a scatterplot of price vs. kms_driven to visualise these outliers:
 
 
 🔴 Red: Outliers
@@ -164,15 +164,15 @@ import seaborn as sns
 sns.scatterplot(data=df, x='kms_driven', y='price', hue='price_outlier', palette=['blue', 'red'])
 plt.title("Price Outliers Highlighted (Red)")
 ```
-**Note**: All screenshots of graph are given in EDA docx file.
+**Note**: All graph screenshots are given in the EDA docx file.
 
 ### 📈 4. Skewness Check
 ```python
 df['price'].skew()
 ```
-**Note**: All screenshots are given in EDA docx file given in repository.
+**Note**: All screenshots are given in the EDA docx file given in the repository.
 
-The skewness value is positive, confirming the long tail towards higher prices. A log transformation may be considered during modeling.
+The skewness value is positive, confirming the long tail towards higher prices. A log transformation may be considered during modelling.
 
 ## 👤 5. Price by Owner Type
 We compared prices across different owner categories:
@@ -193,10 +193,33 @@ sns.boxplot(
 plt.title("Price Distribution by Ownership")
 plt.show()
 ```
-**Note**: All screenshots of graph are given in EDA docx file.
+**Note**: All graph screenshots are given in the EDA docx file.
 
 **Insight:**
-**First-owner** bikes are generally priced higher and are clustered to be most in number followed by second and third owner while **fourth-owner** bikes are few and at the lower end of the price range.
+**First-owner** bikes are generally priced higher and are clustered to be most in number, followed by second and third owner, while **fourth-owner** bikes are few and at the lower end of the price range.
+
+## 6. 📊 Price Segmentation Analysis
+To better understand how bike prices are distributed, we categorised the bikes into three price segments:
+```python
+df['price_category'] = pd.cut(df['price'], bins=[0, 50000, 300000, df['price'].max()], labels=['Low', 'Medium', 'High'])
+```
+As we can see
+**Low** = 0-50,000
+**Medium** = 50,000-300,000
+**High** = Above 300,000
+```python
+df['price_category'].value_counts().sort_index()
+```
+We can see that the **Medium** category has the highest number of bikes, while the **High** category has the lowest number of bikes.
+
+## ✅ Summary
+- The used bike market is heavily concentrated below ₹2.5L
+- Budget bikes (₹0–₹50K) dominate the listings
+- First-owner bikes command the highest number.
+- We have seen positive skewness, and the chart is left-skewed.
+- Bikes between 50,000-30,0000 are the highest.
+
+
 
 
 
