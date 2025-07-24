@@ -1,3 +1,4 @@
+# 2. Exploratory Data Analysis (EDA)
 ## 📊 1. Descriptive Statistics (`df.describe()`)
 
 We begin EDA by examining basic descriptive statistics for the numerical features using:
