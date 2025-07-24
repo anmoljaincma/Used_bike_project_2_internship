@@ -32,7 +32,7 @@ df.describe(include='object')
 
 3. location includes 438 unique city/place entries — Delhi appears most frequently (904 times).
 
-## 💰 Univariate Analysis – Price
+## 2.💰 Univariate Analysis – Price
 
 We explored the `price` column using histograms, boxplots, and categorical segmentation to understand how used bike prices are distributed.
 
