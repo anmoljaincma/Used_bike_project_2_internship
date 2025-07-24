@@ -1,5 +1,5 @@
 
-# 🚲 Used Bike Dataset – Data Cleaning 
+# 1. 🚲 Used Bike Dataset – Data Cleaning 
 
 This project involved cleaning a real-world **used bike dataset** as a part. The dataset contained several inconsistencies, mixed formats, and missing values that needed to be addressed before analysis or modeling.
 
