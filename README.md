@@ -17,7 +17,7 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 - [Price Univariate Analysis](eda_price_univariate_analysis.md)
 - [Other Variables Univariate Analysis](Bike_Data_Project_2_internship.ipynb)
 
-- [Bivariate Analysis](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=xDQrEBDmSbqj)
+- [Bivariate Analysis](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=ouqM-8nnXfzE)
 
 - Multivariate Analysis
 
