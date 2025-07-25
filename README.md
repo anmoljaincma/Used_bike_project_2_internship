@@ -12,9 +12,10 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 
 3. [Data Cleaning](data_cleaning.md)
 
-4. Exploratory Data Analysis
+4. **Exploratory Data Analysis**
 
-- Price Univariate Analysis
+- [Price Univariate Analysis](eda_price_univariate_analysis.md)
+- [Other Variables Univariate Analysis](
 
 - Bivariate Analysis
 
