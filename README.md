@@ -6,47 +6,47 @@ It is the second project of Unified Mentor Internship.
 This project involves analyzing and predicting the prices of used bikes using Exploratory Data Analysis (EDA), Feature Engineering, and Machine Learning models.
 
 ## 📂 Index
-Introduction
+1. Introduction
 
-Dataset
+2. Dataset
 
-Data Cleaning
+3. Data Cleaning
 
-Exploratory Data Analysis
+4. Exploratory Data Analysis
 
-Univariate Analysis
+- Univariate Analysis
 
-Bivariate Analysis
+- Bivariate Analysis
 
-Multivariate Analysis
+- Multivariate Analysis
 
-Geographical & Time Series Analysis
+- Geographical & Time Series Analysis
 
-Feature Engineering
+5. Feature Engineering
 
-Feature Transformation
+6. Feature Transformation
 
-Model Building
+7. Model Building
 
-Data Splitting
+- Data Splitting
 
-Model Selection
+- Model Selection
 
-Model Training & Evaluation
+- Model Training & Evaluation
 
-Hyperparameter Tuning
+8. Hyperparameter Tuning
 
-Results & Insights
+9. Results & Insights
 
-Conclusion & Recommendations
+10. Conclusion & Recommendations
 
-Introduction
+## 1. Introduction
 A machine learning project to predict the price of used bikes based on their specifications, brand, location, and other factors.
 
-Dataset
+## 2. Dataset
 Source: [Mention dataset source]
 
-Columns: model_name, model_year, kms_driven, owner, location, mileage, power, price, cc, brand
+Columns: model_name, model_year, kms_driven, owner, location, mileage, power, price, brand(Created later)
 
 Data Cleaning
 Removed duplicates
