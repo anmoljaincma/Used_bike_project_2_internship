@@ -28,17 +28,15 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 
 8. **Model Building**
 
-  - [Data Splitting](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=rd-vy1V37yPi)
-
-  - [Model Selection](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=qzW6YXqoA6S9)
-
-  - [Model Training & Evaluation](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=89W5bc6dIPg0)
+    - [Data Splitting](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=rd-vy1V37yPi)
+    - [Model Selection](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=qzW6YXqoA6S9)
+    - [Model Training & Evaluation](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=89W5bc6dIPg0)
 
 9. [Hyperparameter Tuning](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=VWP-TBYbbVkr)
 
 10. [Conclusion & Recommendations](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=gObnaCctrWdf)
 
-11.[Next Steps](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=PwQBwRCCOYOs) 
+11. [Next Steps](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=PwQBwRCCOYOs) 
 
 ## 1. Introduction
 A machine learning project to predict the price of used bikes based on their specifications, brand, location, and other factors.
