@@ -8,7 +8,7 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 ## 📂 Index
 1. [Introduction](https://github.com/anmoljaincma/Used_bike_project_2_internship/blob/main/README.md#1-introductionintro)
 
-2. Dataset
+2. [Dataset](https://github.com/anmoljaincma/Used_bike_project_2_internship/blob/main/README.md#2-dataset)
 
 3. Data Cleaning
 
@@ -40,7 +40,7 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 
 10. Conclusion & Recommendations
 
-## 1. Introduction(#intro)
+## 1. Introduction
 A machine learning project to predict the price of used bikes based on their specifications, brand, location, and other factors.
 
 ## 2. Dataset
