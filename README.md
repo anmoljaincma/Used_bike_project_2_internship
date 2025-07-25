@@ -23,7 +23,7 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 7. **Data Visualization**
    - [Multivariate Plots](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=leTIH3yRof-y)
    - [Geographical Analysis](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=71isxHIGSu-H)
-   - [Time Series Analysis](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=Li96U5I1QY_u)
+   - [Time Series Analysis](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=mLy-zCDx5uOy)
 
 8. **Model Building**
 
