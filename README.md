@@ -10,11 +10,11 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 
 2. [Dataset](https://github.com/anmoljaincma/Used_bike_project_2_internship/blob/main/README.md#2-dataset)
 
-3. Data Cleaning
+3. [Data Cleaning](data_cleaning.md)
 
 4. Exploratory Data Analysis
 
-- Univariate Analysis
+- Price Univariate Analysis
 
 - Bivariate Analysis
 
@@ -44,8 +44,8 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 A machine learning project to predict the price of used bikes based on their specifications, brand, location, and other factors.
 
 ## 2. Dataset
-Source: [cleaned_bike_data.csv](cleaned_bike_data.csv)
-Columns: model_name, model_year, kms_driven, owner, location, mileage, power, price, brand(Created later)
+Source: [cleaned_bike_data.csv](cleaned_bike_data.csv)  
+**Columns:** model_name, model_year, kms_driven, owner, location, mileage, power, price, brand(Created later)
 
 Data Cleaning
 Removed duplicates
