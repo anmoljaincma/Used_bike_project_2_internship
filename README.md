@@ -35,8 +35,7 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 
 10. [Conclusion & Recommendations](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=gObnaCctrWdf)
 
-11. [Next Steps](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=PwQBwRCCOYOs) 
-
+11. [Next Steps](https://colab.research.google.com/drive/1xA9RRs4hOEfvhvypMgYkVl8SR_A1lGQ3?usp=sharing#scrollTo=21SHqmcdOY1p)
 ## 1. Introduction
 A machine learning project to predict the price of used bikes based on their specifications, brand, location, and other factors.
 
