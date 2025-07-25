@@ -40,7 +40,7 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 
 10. Conclusion & Recommendations
 
-## 1. Introduction
+## 1. Introduction(#intro)
 A machine learning project to predict the price of used bikes based on their specifications, brand, location, and other factors.
 
 ## 2. Dataset
