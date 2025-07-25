@@ -1,4 +1,4 @@
-# 2. Exploratory Data Analysis (EDA)
+# 4. Exploratory Data Analysis (EDA)
 
 ## [Click here for docx file with all screenshots](https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2Fanmoljaincma%2FUsed_bike_project_2_internship%2Frefs%2Fheads%2Fmain%2FEDA_Price_Univariate_Analysis%2520-%2520Project%25202%2520-%2520Internship.docx&wdOrigin=BROWSELINK)
 ## 📊 1. Descriptive Statistics (`df.describe()`)
