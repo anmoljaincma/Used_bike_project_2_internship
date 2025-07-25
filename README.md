@@ -6,7 +6,7 @@ It is the second project of Unified Mentor Internship.
 This project involves analyzing and predicting the prices of used bikes using Exploratory Data Analysis (EDA), Feature Engineering, and Machine Learning models.
 
 ## 📂 Index
-1. Introduction
+1. [Introduction](#intro)
 
 2. Dataset
 
