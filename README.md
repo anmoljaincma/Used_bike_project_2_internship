@@ -44,8 +44,7 @@ This project involves analyzing and predicting the prices of used bikes using Ex
 A machine learning project to predict the price of used bikes based on their specifications, brand, location, and other factors.
 
 ## 2. Dataset
-Source: [Mention dataset source]
-
+Source: [cleaned_bike_data.csv](cleaned_bike_data.csv)
 Columns: model_name, model_year, kms_driven, owner, location, mileage, power, price, brand(Created later)
 
 Data Cleaning
