@@ -1,6 +1,6 @@
 # 2. Exploratory Data Analysis (EDA)
 
-## [Click here for docx file with all screenshots](EDA_Price_Univariate_Analysis - Project 2 - Internship.docx)
+[Click here for docx file with all screenshots](EDA_Price_Univariate_Analysis - Project 2 - Internship.docx)
 ## 📊 1. Descriptive Statistics (`df.describe()`)
 
 We begin EDA by examining basic descriptive statistics for the numerical features using:
